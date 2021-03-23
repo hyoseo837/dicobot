@@ -1,5 +1,5 @@
 import discord
-
+import os
 
 class chatbot(discord.Client):
     # 프로그램이 처음 실행되었을 때 초기 구성
@@ -37,4 +37,4 @@ if __name__ == "__main__":
     # 객체를 생성
     client = chatbot()
     # TOKEN 값을 통해 로그인하고 봇을 실행
-    client.run("ODI0MDA0Nzk2MDY3MDg2Mzg3.YFpERA.2CsZGSevhfEFjakbgJK-Mbtewvw")
+    client.run(os.environ["token"])
