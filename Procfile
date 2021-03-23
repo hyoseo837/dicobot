@@ -1,1 +1,1 @@
-worker: python dico-bot.py, dico2-bot.py
+worker: python dico2-bot.py
