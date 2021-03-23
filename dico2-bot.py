@@ -1,6 +1,7 @@
 # discord 라이브러리 사용 선언
 import discord
 import random
+import os
 #https://discord.com/developers/applications
 
 포브스 = ['가장 집가고 싶은 상태 1위', '졸려죽을것 같은 상황 1위', '이 딸이에요', '가장 듣기싫은 수업 1위', '가장 집가고 싶은 상태 1위' ]
@@ -85,4 +86,4 @@ if __name__ == "__main__":
     # 객체를 생성
     client = chatbot()
     # TOKEN 값을 통해 로그인하고 봇을 실행
-    client.run("ODI0MDExNjkxNDc3MDQxMTUz.YFpKsA.Ezg8ZpVUNVAuHFhsL7FqoynEZ08")
+    client.run(os.environ['token2'])
