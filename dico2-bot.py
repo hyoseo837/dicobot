@@ -4,7 +4,7 @@ import os
 
 #https://discord.com/developers/applications
 
-포브스 = ['가장 집가고 싶은 상태 1위', '졸려죽을것 같은 상황 1위', '이 딸이에요', '가장 듣기싫은 수업 1위', '가장 집가고 싶은 상태 1위' ]
+포브스 = ['가장 집가고 싶은 상태 1위', '졸려죽을것 같은 상황 1위', '이 딸이에요', '가장 듣기싫은 수업 1위' ]
 
 class chatbot(discord.Client):
 
@@ -34,21 +34,6 @@ class chatbot(discord.Client):
             msg = message.content
             await channel.send(msg)
             return None
-        if message.content == ('다들 뭐해?'):
-            channel = message.channel
-            msg = "전 새로운 밈을 찾아 헤메고 있어요"
-            await channel.send(msg)
-            return None
-        if message.content == ('신재원이 누구야?'):
-            channel = message.channel
-            msg = "저를 만들어준 분이세요 ^^"
-            await channel.send(msg)
-            return None
-        if message.content == ('집가고 싶다'):
-            channel = message.channel
-            msg = "아~ 집가고 싶다~~"
-            await channel.send(msg)
-            return None
         if message.content == ('포브스 선정'):
             channel = message.channel
             msg = random.choice(포브스)
@@ -57,11 +42,6 @@ class chatbot(discord.Client):
         if message.content == ('r 분의 y'):
             channel = message.channel
             msg = "사인함수~ r 분의 x 코사인 함수~"
-            await channel.send(msg)
-            return None
-        if message.content == ('아오'):
-            channel = message.channel
-            msg = "일하기 싫어.."
             await channel.send(msg)
             return None
         if message.content.startswith('이야..'):
@@ -74,7 +54,7 @@ class chatbot(discord.Client):
             msg = "속이 뻥 (울컥울컥)"
             await channel.send(msg)
             return None
-        if message.content.startswith('뭐야') and message.content[-2:] == ('줘요'):
+        if message.content.startswith('뭐야') and message.content[-3:] == ('줘요'):
             channel = message.channel
             msg = "이래서 눈치빠른 놈들은 싫다니까"
             await channel.send(msg)
@@ -91,10 +71,14 @@ class chatbot(discord.Client):
             return None
         if message.content[-5:] == ('뭐냐면..'):
             channel = message.channel
-            msg = "네~ 알려드렸습니다~)"
+            msg = "네~ 알려드렸습니다~"
             await channel.send(msg)
             return None
-
+        if message.content == ('!도움'):
+            channel = message.channel
+            msg = "밈밈아\n무야호!\n~멈춰!\n미안하다\n포브스 선정\nr 분의 y\n아오\n이야..\n~던가!\n뭐야~줘요\n,미안하다\n엄\n~뭐냐면.."
+            await channel.send(msg)
+            return None
 if __name__ == "__main__":
     client = chatbot()
     client.run(os.environ["token2"])
