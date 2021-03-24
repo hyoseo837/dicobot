@@ -47,7 +47,7 @@ class chatbot(discord.Client):
             return None
         if message.content == ('알분의 와이'):
             channel = message.channel
-            msg = "사인함수 ~\n  알분의 엑스  코사인 함수 ~"
+            msg = "사인함수 ~\n알분의 엑스  코사인 함수 ~"
             await channel.send(msg)
             return None
         if message.content.startswith('이야..'):
