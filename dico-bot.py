@@ -26,8 +26,33 @@ class chatbot(discord.Client):
             # 현재 채널을 받아옴
             channel = message.channel
             # 답변 내용 구성
-            msg = message.content
+            msg = message.content + "\n:raised_hand:"
             # msg에 지정된 내용대로 메시지를 전송
+            await channel.send(msg)
+            return None
+        if message.content.startswith('뭐야') and message.content[-3:] == ('줘요'):
+            channel = message.channel
+            msg = "이래서 눈치빠른 놈들은 싫다니까"
+            await channel.send(msg)
+            return None
+        if message.content.startswith('미안하다'):
+            channel = message.channel
+            msg = "이거 보여주려고 어그로 끌었다"
+            await channel.send(msg)
+            return None
+        if message.content == ('엄'):
+            channel = message.channel
+            msg = "준"
+            await channel.send(msg)
+            return None
+        if message.content == ('r 분의 y'):
+            channel = message.channel
+            msg = "사인함수~ r 분의 x 코사인 함수~"
+            await channel.send(msg)
+            return None
+        if message.content.startswith('이야..'):
+            channel = message.channel
+            msg = "그죠..?"
             await channel.send(msg)
             return None
             

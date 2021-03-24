@@ -31,7 +31,7 @@ class chatbot(discord.Client):
             return None
         if message.content[-3:] == "멈춰!":
             channel = message.channel
-            msg = message.content
+            msg = message.content + "\n:raised_hand:"
             await channel.send(msg)
             return None
         if message.content == ('포브스 선정'):
@@ -39,34 +39,9 @@ class chatbot(discord.Client):
             msg = random.choice(포브스)
             await channel.send(msg)
             return None
-        if message.content == ('r 분의 y'):
-            channel = message.channel
-            msg = "사인함수~ r 분의 x 코사인 함수~"
-            await channel.send(msg)
-            return None
-        if message.content.startswith('이야..'):
-            channel = message.channel
-            msg = "그죠..?"
-            await channel.send(msg)
-            return None
         if message.content[-3:] == ('던가!'):
             channel = message.channel
             msg = "속이 뻥 (울컥울컥)"
-            await channel.send(msg)
-            return None
-        if message.content.startswith('뭐야') and message.content[-3:] == ('줘요'):
-            channel = message.channel
-            msg = "이래서 눈치빠른 놈들은 싫다니까"
-            await channel.send(msg)
-            return None
-        if message.content.startswith('미안하다'):
-            channel = message.channel
-            msg = "이거 보여주려고 어그로 끌었다"
-            await channel.send(msg)
-            return None
-        if message.content == ('엄'):
-            channel = message.channel
-            msg = "준"
             await channel.send(msg)
             return None
         if message.content[-5:] == ('뭐냐면..'):
