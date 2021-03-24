@@ -89,7 +89,7 @@ class chatbot(discord.Client):
             msg = "준"
             await channel.send(msg)
             return None
-        if message.content[-3:] == ('뭐냐면..'):
+        if message.content[-5:] == ('뭐냐면..'):
             channel = message.channel
             msg = "네~ 알려드렸습니다~)"
             await channel.send(msg)
