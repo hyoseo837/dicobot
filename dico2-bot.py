@@ -1,10 +1,10 @@
 import discord
 import random
 import os
+
 #https://discord.com/developers/applications
 
 포브스 = ['가장 집가고 싶은 상태 1위', '졸려죽을것 같은 상황 1위', '이 딸이에요', '가장 듣기싫은 수업 1위', '가장 집가고 싶은 상태 1위' ]
-
 
 class chatbot(discord.Client):
 
@@ -69,14 +69,32 @@ class chatbot(discord.Client):
             msg = "그죠..?"
             await channel.send(msg)
             return None
-        if message.content[-3:]=='던가!':
+        if message.content[-3:] == ('던가!'):
             channel = message.channel
             msg = "속이 뻥 (울컥울컥)"
             await channel.send(msg)
             return None
-
+        if message.content.startswith('뭐야') and message.content[-3:] == ('줘요'):
+            channel = message.channel
+            msg = "이래서 눈치빠른 놈들은 싫다니까"
+            await channel.send(msg)
+            return None
+        if message.content.startswith('미안하다'):
+            channel = message.channel
+            msg = "이거 보여주려고 어그로 끌었다"
+            await channel.send(msg)
+            return None
+        if message.content == ('엄'):
+            channel = message.channel
+            msg = "준"
+            await channel.send(msg)
+            return None
+        if message.content[-3:] == ('뭐냐면..'):
+            channel = message.channel
+            msg = "네~ 알려드렸습니다~)"
+            await channel.send(msg)
+            return None
 
 if __name__ == "__main__":
     client = chatbot()
     client.run(os.environ["token2"])
-    #이거 토큰 바뀜
