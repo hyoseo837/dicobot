@@ -68,10 +68,12 @@ class chatbot(discord.Client):
             channel = message.channel
             msg = "그죠..?"
             await channel.send(msg)
-        if message.content[-3:]('던가!'):
+            return None
+        if message.content[-3:]=='던가!':
             channel = message.channel
             msg = "속이 뻥 (울컥울컥)"
             await channel.send(msg)
+            return None
 
 
 if __name__ == "__main__":
