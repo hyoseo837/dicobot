@@ -74,7 +74,7 @@ class chatbot(discord.Client):
             msg = "속이 뻥 (울컥울컥)"
             await channel.send(msg)
             return None
-        if message.content.startswith('뭐야') and message.content[-3:] == ('줘요'):
+        if message.content.startswith('뭐야') and message.content[-2:] == ('줘요'):
             channel = message.channel
             msg = "이래서 눈치빠른 놈들은 싫다니까"
             await channel.send(msg)
