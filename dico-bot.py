@@ -30,7 +30,7 @@ class chatbot(discord.Client):
             # msg에 지정된 내용대로 메시지를 전송
             await channel.send(msg)
             return None
-        if message.content.startswith('뭐야') and message.content[-3:] == ('줘요'):
+        if message.content.startswith('뭐야') and message.content[-2:] == ('줘요'):
             channel = message.channel
             msg = "이래서 눈치빠른 놈들은 싫다니까"
             await channel.send(msg)
@@ -45,9 +45,9 @@ class chatbot(discord.Client):
             msg = "준"
             await channel.send(msg)
             return None
-        if message.content == ('r 분의 y'):
+        if message.content == ('알분의 와이'):
             channel = message.channel
-            msg = "사인함수~ r 분의 x 코사인 함수~"
+            msg = "사인함수 ~\n  알분의 엑스  코사인 함수 ~"
             await channel.send(msg)
             return None
         if message.content.startswith('이야..'):
