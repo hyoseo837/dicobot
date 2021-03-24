@@ -21,7 +21,11 @@ class chatbot(discord.Client):
         if message.author.bot:
             return None
         
-        # message.content = message의 내용
+        if message.content == ('멈멈아'):
+            channel = message.channel
+            msg = "왜 불렁~"
+            await channel.send(msg)
+            return None
         if message.content[-3:] == "멈춰!":
             # 현재 채널을 받아옴
             channel = message.channel
