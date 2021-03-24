@@ -76,7 +76,7 @@ class chatbot(discord.Client):
             return None
         if message.content == ('!도움'):
             channel = message.channel
-            msg = "밈밈아\n무야호!\n~멈춰!\n미안하다\n포브스 선정\nr 분의 y\n아오\n이야..\n~던가!\n뭐야~줘요\n미안하다\n엄\n~뭐냐면.."
+            msg = "밈밈아\n무야호!\n~멈춰!\n미안하다\n포브스 선정\nr 분의 y\n이야..\n~던가!\n뭐야~줘요\n미안하다\n엄\n~뭐냐면.."
             await channel.send(msg)
             return None
 if __name__ == "__main__":
