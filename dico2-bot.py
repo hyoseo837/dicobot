@@ -24,6 +24,11 @@ class chatbot(discord.Client):
             msg = "왜 불렁~"
             await channel.send(msg)
             return None
+        if message.content.startswith("&&"):
+            channel = message.channel
+            msg = message.content[2:]
+            await channel.send(msg)
+            return None
         if message.content == ('무야호!'):
             channel = message.channel
             msg = "그만큼 신나시는 거지~!"
